@@ -1,47 +1,62 @@
-import React from 'react'
-import Head from 'next/head'
-import Nav from '../components/Nav'
-import Layout from '../components/Layout';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Button } from '@material-ui/core'
 
-const Home = () => (
-  <div>
+// render landing page
+// route to about me, projects, and resume
+// show contact info at footer
+// allow personal login - use jwt / auth
+// project generator
+
+const Index = () => (
+  <>
     <Head>
       <title>Home</title>
       <link rel="icon" href="/favicon.ico" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     </Head>
-
-<Layout>
-
-    <Nav />
+    
+    {/* hidden login button */}
+    <Link href="/login">
+      <Button className="login"></Button>
+    </Link>
 
     <div className="hero">
-      <h1 className="title">Welcome to Next.js!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
-
+      <h1 className="title">Vincent Nguyen</h1>
       <div className="row">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Learn more about Next.js in the documentation.</p>
-        </a>
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Next.js Learn &rarr;</h3>
-          <p>Learn about Next.js by following an interactive tutorial!</p>
-        </a>
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Find other example boilerplates on the Next.js GitHub.</p>
-        </a>
+
+        <Link href="/about">
+          <a className="card">
+            <h3>About Me &rarr;</h3>
+            <p>A little bit about me</p>
+          </a>
+        </Link>
+
+        <Link href="/projects">
+          <a className="card">
+            <h3>Projects &rarr;</h3>
+            <p>See my work</p>
+          </a>
+        </Link>
+
+        <Link href="/resume">
+          <a className="card">
+            <h3>Resume &rarr;</h3>
+            <p>View and download PDF</p>
+          </a>
+        </Link>
+
       </div>
     </div>
 
     <style jsx>{`
+      :global(body) {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
+          Helvetica, sans-serif;
+      }
       .hero {
         width: 100%;
         color: #333;
@@ -86,10 +101,15 @@ const Home = () => (
         font-size: 13px;
         color: #333;
       }
+      .login {
+        display: flex;
+        text-align: center;
+      }
     `}</style>
-    </Layout>
 
-  </div>
+  </>
 )
 
-export default Home
+const handleClick = () => console.log('clicked');
+
+export default Index;
