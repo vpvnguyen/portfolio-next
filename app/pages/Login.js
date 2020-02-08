@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 const Login = () => (
     <>
-        <div>Login</div>
+        <div>render login component</div>
         <Link href="/Dashboard">
-            <a>dashboard</a>
+            <a>render dashboard when user has logged in</a>
         </Link>
     </>
 );
