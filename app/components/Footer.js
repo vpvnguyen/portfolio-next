@@ -3,6 +3,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 const Footer = () => (
+    <>
 <footer className="footer">
     <a href="https://github.com/vpvnguyen" target="_blank"><GitHubIcon /></a>
     |
@@ -10,8 +11,14 @@ const Footer = () => (
     |
     <a href="https://github.com/vpvnguyen" target="_blank"><MailOutlineIcon /></a>
 
-    
 </footer>
+<style jsx>{`
+    .footer {
+        display: flex;
+        justify-content: space-evenly;
+    }
+`}</style>
+</>
 );
 
 export default Footer;
