@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Button } from '@material-ui/core'
-
+import { Button } from '@material-ui/core';
+import Footer from '../components/Footer';
 // render landing page
 // route to about me, projects, and resume
 // show contact info at footer
@@ -12,7 +12,7 @@ import { Button } from '@material-ui/core'
 const Index = () => (
   <>
     <Head>
-      <title>Home</title>
+      <title>Vincent Nguyen</title>
       <link rel="icon" href="/favicon.ico" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -25,14 +25,12 @@ const Index = () => (
 
     <div className="hero">
       <h1 className="title">Vincent Nguyen</h1>
-      <div className="row">
+      <p className="description">summary about me here</p>
+      <p className="description">some animation</p>
+      <p className="description">welcome to my page maybe?</p>
 
-        <Link href="/about">
-          <a className="card">
-            <h3>About Me &rarr;</h3>
-            <p>A little bit about me</p>
-          </a>
-        </Link>
+
+      <div className="row">
 
         <Link href="/projects">
           <a className="card">
@@ -49,7 +47,10 @@ const Index = () => (
         </Link>
 
       </div>
-    </div>
+
+    <Footer />
+    </div> 
+
 
     <style jsx>{`
       :global(body) {
