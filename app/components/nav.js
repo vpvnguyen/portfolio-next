@@ -1,6 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 
+// component did mount / get data
+// create list of info needed to be represented as links
+// 
 const links = [
   { href: 'https://zeit.co/now', label: 'ZEIT' },
   { href: 'https://github.com/zeit/next.js', label: 'GitHub' },
@@ -8,6 +11,8 @@ const links = [
   ...link,
   key: `nav-link-${link.href}-${link.label}`,
 }))
+
+// get data from nav menu
 
 const Nav = () => (
   <nav>
@@ -53,4 +58,4 @@ const Nav = () => (
   </nav>
 )
 
-export default Nav
+export default Nav;
