@@ -39,7 +39,7 @@ const Index = () => (
           </a>
         </Link>
 
-        <Link href="/resume">
+        <Link href="/Resume">
           <a className="card">
             <h3>Resume &rarr;</h3>
             <p>View and download PDF</p>
