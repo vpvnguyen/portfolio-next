@@ -26,7 +26,7 @@ const Index = () => (
     <div className="hero">
       <h1 className="title">Vincent Nguyen</h1>
       <p className="description">summary about me here</p>
-      <p className="description">some animation</p>
+      <p className="description">add some animations here</p>
       <p className="description">welcome to my page maybe?</p>
 
 
